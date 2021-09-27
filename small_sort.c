@@ -6,7 +6,7 @@
 /*   By: ssemanco <ssemanco@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/09/15 16:15:31 by ssemanco      #+#    #+#                 */
-/*   Updated: 2021/09/24 14:40:23 by ssemanco      ########   odam.nl         */
+/*   Updated: 2021/09/24 20:41:03 by ssemanco      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,8 @@ void	sort_5arg(t_stack **a_stack, t_stack **b_stack)
 {
 	push_biggest(a_stack, b_stack);
 	push_smallest(a_stack, b_stack);
-	sort_3arg(a_stack);
+	if (check_order(*a_stack) != 0)
+		sort_3arg(a_stack);
 	pa(a_stack, b_stack);
 	pa(a_stack, b_stack);
 	ra(a_stack);

@@ -6,7 +6,7 @@
 #    By: simonasemancova <simonasemancova@studen      +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/06 00:54:15 by simonaseman   #+#    #+#                  #
-#    Updated: 2021/05/25 14:55:46 by ssemanco      ########   odam.nl          #
+#    Updated: 2021/09/24 17:16:15 by ssemanco      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,9 +82,6 @@ $(NAME): $(OBJECTS)
 
 %.o: %.c $(HEADER)
 		$(CC) -c $(cFLAGS) -o $@ $<
-
-$(NAME): $(C_OBJS)
-			ar rcs $(NAME) $(C_OBJS)
 
 clean:
 	$(RM) $(C_OBJS) $(BONUS_OBJS)
